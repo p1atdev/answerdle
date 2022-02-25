@@ -11,6 +11,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.14.2",
     "@iconify-json/carbon": "^1.0.12",
+    "@iconify-json/ci": "^1.1.0",
     "@iconify-json/twemoji": "^1.0.2",
     "@pinia/nuxt": "^0.1.8",
     "@unocss/nuxt": "^0.20.1",

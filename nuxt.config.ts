@@ -1,26 +1,22 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from "nuxt3"
+
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"
 
 export default defineNuxtConfig({
-  meta: {
-    title: 'Vitesse Nuxt 3',
-  },
-  buildModules: [
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@pinia/nuxt',
-  ],
-  vueuse: {
-    ssrHandlers: true,
-  },
-  unocss: {
-    uno: true,
-    attributify: true,
-    preflight: true,
-    icons: {
-      scale: 1.2,
+    meta: {
+        title: "ansWordle",
     },
-    shortcuts: [
-      ['btn', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ],
-  },
+    buildModules: ["@vueuse/nuxt", "@unocss/nuxt", "@pinia/nuxt"],
+    vueuse: {
+        ssrHandlers: true,
+    },
+    unocss: {
+        uno: true,
+        attributify: true,
+        preflight: true,
+        icons: {
+            scale: 1.2,
+        },
+        shortcuts: [["center", "mx-auto grid grid-col-1 items-center"]],
+    },
 })

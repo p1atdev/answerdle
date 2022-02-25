@@ -1,10 +1,12 @@
+<script lang="ts" setup></script>
+
 <template>
-  <main class="py-20 px-10 text-center">
-    <NuxtPage />
-    <Footer />
-  </main>
+    <main class="">
+        <NavBar />
+        <NuxtPage />
+    </main>
 </template>
 
 <style>
-@import '~/styles/main.css';
+@import "~/styles/main.css";
 </style>
