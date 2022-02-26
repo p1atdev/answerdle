@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "http"
 import { useQuery } from "h3"
-import { WordleAnswer } from "~~/types/wordle"
+import { WordleAnswer } from "~~/src/types/wordle"
 
 export default async function (req: IncomingMessage) {
     const query = useQuery(req)

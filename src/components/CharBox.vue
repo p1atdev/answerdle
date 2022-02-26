@@ -9,7 +9,11 @@ const { status } = defineProps<Props>()
 
 <template>
     <div
-        :class="status == 'absent' ? 'bg-gray-400 dark:bg-gray-500' : 'bg-green-600 dark:bg-green-700 flip delay-250'"
+        :class="
+            status == 'absent'
+                ? 'bg-wdlGray-primary dark:bg-wdlGray-dark'
+                : 'bg-wdlGreen-primary dark:bg-wdlGreen-dark flip delay-250'
+        "
         font-semibold
         text-4xl
         px-3
@@ -22,7 +26,7 @@ const { status } = defineProps<Props>()
         items-center
     >
         <div
-            :class="status == 'absent' ? 'text-gray-400 opacity-0 ' : 'text-white opacity-100 delay-250'"
+            :class="status == 'absent' ? 'text-wdl-gray opacity-0 ' : 'text-white opacity-100 delay-250'"
             transition-colors
             transition-opacity
         >

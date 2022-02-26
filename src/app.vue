@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-    <main class="">
-        <NavBar />
+    <NavBar />
+    <main>
         <NuxtPage />
     </main>
 </template>
