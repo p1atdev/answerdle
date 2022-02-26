@@ -5,9 +5,24 @@ import presetAttributify from "@unocss/preset-attributify"
 // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"
 
 export default defineNuxtConfig({
-    meta: {
-        title: "ANSWERDLE",
-    },
+    meta: [
+        { name: "title", content: "ANSWERDLE" },
+        { name: "description", content: "See the answer of Wordle!" },
+        // ogp
+        { property: "og:type", content: "website" },
+        { property: "og:title", content: "ANSWERDLE" },
+        { property: "og:description", content: "See the answer of Wordle!" },
+        // { property: "og:image", content: "https://answerdle.net/ogp.png" },
+        { property: "og:url", content: "https://answerdle.net/" },
+        // twitter
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:site", content: "@p1atdev" },
+        { name: "twitter:title", content: "ANSWERDLE" },
+        { name: "twitter:description", content: "See the answer of Wordle!" },
+        // { name: "twitter:image", content: "https://answerdle.com/ogp.png" },
+        { name: "twitter:image:alt", content: "ANSWERDLE" },
+        { name: "twitter:url", content: "https://answerdle.net/" },
+    ],
     buildModules: ["@vueuse/nuxt", "@unocss/nuxt", "@pinia/nuxt"],
     vueuse: {
         ssrHandlers: true,
@@ -35,6 +50,10 @@ export default defineNuxtConfig({
                     dark: "#121213",
                 },
                 wdlBlack: "#212121",
+                keyboard: {
+                    light: "#d3d6da",
+                    dark: "#3a3a3c",
+                },
             },
         },
         presets: [presetAttributify(), presetUno()],

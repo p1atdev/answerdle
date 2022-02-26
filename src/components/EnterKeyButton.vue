@@ -12,7 +12,7 @@ const flip = () => {
     <div grid grid-col-1 items-center>
         <div mx-auto>
             <button @click="flip">
-                <div text-3xl text-black bg-gray-300 py-5 px-6 rounded-md>REVEAL</div>
+                <div bg-keyboard-light dark:bg-keyboard-dark text-3xl py-5 px-6 rounded-md>REVEAL</div>
             </button>
         </div>
     </div>
