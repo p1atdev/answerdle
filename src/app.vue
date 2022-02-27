@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useMouse } from "@vueuse/core"
+
+// const { x, y, sourceType } = useMouse()
+</script>
 
 <template>
     <NavBar />

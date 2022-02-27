@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { name: "twitter:site", content: "@p1atdev" },
         { name: "twitter:title", content: "ANSWERDLE" },
         { name: "twitter:description", content: "See the answer of Wordle!" },
-        // { name: "twitter:image", content: "https://answerdle.com/ogp.png" },
+        { name: "twitter:image", content: "https://answerdle.net/favicon.ico" },
         { name: "twitter:image:alt", content: "ANSWERDLE" },
         { name: "twitter:url", content: "https://answerdle.net/" },
     ],
