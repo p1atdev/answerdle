@@ -1,6 +1,7 @@
 import { defineNuxtConfig } from "nuxt3"
 import presetUno from "@unocss/preset-uno"
 import presetAttributify from "@unocss/preset-attributify"
+import presetIcons from "@unocss/preset-icons"
 
 // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"
 
@@ -56,7 +57,13 @@ export default defineNuxtConfig({
                 },
             },
         },
-        presets: [presetAttributify(), presetUno()],
+        presets: [presetAttributify(), presetUno(), presetIcons()],
     },
     srcDir: "src/",
+
+    // ↓ #3393の暫定的な対処
+    components: {
+        global: true,
+        dirs: ["~/components"],
+    },
 })

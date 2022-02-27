@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import Title from "../components/Title.vue"
+
 const today = new Date()
 
 const { data } = await useFetch("/api/wordle", {

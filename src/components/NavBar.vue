@@ -1,10 +1,9 @@
+<script lang="ts" setup></script>
+
 <template>
-    <div grid grid-col-1 place-items-center>
-        <div w-full flex flex-row-reverse pt-6 px-12>
-            <div text-xl>
-                <DarkToggle />
-                <!-- <SettingsButton /> -->
-            </div>
+    <div text-4xl w-full flex flex-row-reverse px-12 pt-6 gap-x-4 items-baseline text-gray-500>
+        <div>
+            <DarkToggle />
         </div>
     </div>
 </template>
