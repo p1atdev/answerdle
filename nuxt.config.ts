@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     buildModules: ["@vueuse/nuxt", "@unocss/nuxt", "@pinia/nuxt"],
     vueuse: {
         // カラーモードがなぜか反映されない不具合解消
-        ssrHandlers: true,
+        // ssrHandlers: true,
     },
     unocss: {
         uno: true,
@@ -61,6 +61,7 @@ export default defineNuxtConfig({
         presets: [presetAttributify(), presetUno(), presetIcons()],
     },
     srcDir: "src/",
+    // ssr: true,
 
     // ↓ #3393の暫定的な対処
     // components: {
