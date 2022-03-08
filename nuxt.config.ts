@@ -61,7 +61,7 @@ export default defineNuxtConfig({
         presets: [presetAttributify(), presetUno(), presetIcons()],
     },
     srcDir: "src/",
-    // ssr: true,
+    ssr: true,
 
     // ↓ #3393の暫定的な対処
     // components: {

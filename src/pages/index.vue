@@ -14,7 +14,7 @@ const answer = data.value.answer
 
 <template>
     <Title />
-    <ClientOnly>
+    <Suspense>
         <div v-if="answer">
             <WordBox :word="answer" />
             <EnterKeyButton />
@@ -33,5 +33,5 @@ const answer = data.value.answer
                 <div text-4xl my-30>solving wordle...</div>
             </div>
         </template>
-    </ClientOnly>
+    </Suspense>
 </template>

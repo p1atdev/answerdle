@@ -3,16 +3,27 @@ import { useQuery } from "h3"
 import { WordleAnswer } from "~~/src/types/wordle"
 
 export default async function (req: IncomingMessage) {
-    const query = useQuery(req)
-    const date = query.date
+    try {
+        const query = useQuery(req)
+        const date = query.date
 
-    const res = await fetch(`https://wordle-solver.deno.dev/answer?date=${date}`, {
-        method: "GET",
-    })
+        const url = "https://wordle-solver.deno.dev/answer"
+        // const url = "https://answerdle.onrender.com/api/wordle"
 
-    const json: WordleAnswer = await res.json()
+        const res = await fetch(`${url}?date=${date}`, {
+            method: "GET",
+        })
 
-    // console.log(res)
+        const json: WordleAnswer = await res.json()
 
-    return json
+        // console.log(res)
+
+        return json
+    } catch (err) {
+        console.log(err)
+        return {
+            gameNumber: -1,
+            answer: "ERROR",
+        }
+    }
 }
