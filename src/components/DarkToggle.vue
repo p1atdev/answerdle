@@ -8,7 +8,7 @@ function toggleDark() {
 </script>
 
 <template>
-    {{ color }}
+    <!-- {{ color }} -->
     <button class="!outline-none" @click="toggleDark()">
         <div class="dark:i-carbon-moon i-carbon:sun" />
     </button>
