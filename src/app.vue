@@ -8,9 +8,11 @@
     <div>
         <NavBar />
 
-        <main class="">
+        <main class="mb-24">
             <NuxtPage />
         </main>
+
+        <Footer />
     </div>
 </template>
 

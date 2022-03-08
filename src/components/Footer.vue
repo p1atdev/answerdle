@@ -1,13 +1,23 @@
 <template>
-  <div
-    text="xl gray4"
-    m-5
-    flex
-    justify-center
-    gap-3
-  >
-    <NuxtLink i-carbon-campsite to="/" />
-    <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="__blank" />
-    <DarkToggle />
-  </div>
+    <footer mb-8>
+        <div flex flex-col text-gray-500 gap-y-1>
+            <div grid grid-cols-1 place-items-center>
+                <div flex items-center gap-x-4>
+                    <a href="https://github.com/p1atdev/answerdle" target="_blank" rel="noreferrer noopener">
+                        <div flex items-center gap-x-2>
+                            <div class="i-akar-icons-github-fill text-lg"></div>
+                            <p>GitHub</p>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com/p1atdev" target="_blank" rel="noreferrer noopener">
+                        <div flex items-center gap-x-1>
+                            <div class="i-akar-icons-twitter-fill text-lg"></div>
+                            <p>@p1atdev</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div mx-auto>&copy; 2022 p1atdev</div>
+        </div>
+    </footer>
 </template>

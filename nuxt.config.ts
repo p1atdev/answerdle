@@ -62,8 +62,8 @@ export default defineNuxtConfig({
     srcDir: "src/",
 
     // ↓ #3393の暫定的な対処
-    components: {
-        global: true,
-        dirs: ["~/components"],
-    },
+    // components: {
+    //     global: true,
+    //     dirs: ["~/components"],
+    // },
 })
