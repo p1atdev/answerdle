@@ -1,5 +1,6 @@
-import { Box, Text } from "@chakra-ui/layout"
-import type { GetServerSideProps, NextPage } from "next"
+import type { GetServerSideProps } from "next"
+import AnswerdleHeader from "../../components/ui/header"
+import WordleLayout from "../../layout/wordle"
 import { Answer } from "../../types/answer"
 import { getWordle } from "../../utils/game"
 import { getAnswer } from "../../utils/solver"
@@ -24,11 +25,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 const Page = ({ answer }: Props) => {
     return (
-        <div>
-            <Box>
-                <Text>{answer.answer}</Text>
-            </Box>
-        </div>
+        <>
+            <WordleLayout answer={answer}>
+                <AnswerdleHeader href={"wordle2"} title={"ANSWERDLE 2"} />
+            </WordleLayout>
+        </>
     )
 }
 

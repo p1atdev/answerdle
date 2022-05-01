@@ -66,7 +66,7 @@ export const getAnswer = (game: Game, date: Date): Answer => {
         default: {
             return {
                 game: game.name,
-                gameNumber: diff + 1,
+                gameNumber: diff,
                 answer: game.answers[diff % game.answers.length],
             }
         }

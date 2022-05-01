@@ -1,12 +1,14 @@
 import { Box, Text } from "@chakra-ui/layout"
 import { parse } from "date-fns"
 import type { GetServerSideProps, NextPage } from "next"
+import WordleLayout from "../../layout/wordle"
 import { Answer } from "../../types/answer"
 import { getWordle } from "../../utils/game"
 import { getAnswer } from "../../utils/solver"
 
 type Props = {
     answer: Answer
+    date: string
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -31,6 +33,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         return {
             props: {
                 answer: answer,
+                date: date.toString(),
             },
         }
     } catch {
@@ -43,13 +46,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
 }
 
-const Page = ({ answer }: Props) => {
+const Page = ({ answer, date }: Props) => {
     return (
-        <div>
-            <Box>
-                <Text>{answer.answer}</Text>
-            </Box>
-        </div>
+        <WordleLayout answer={answer} date={date}>
+            <></>
+        </WordleLayout>
     )
 }
 
