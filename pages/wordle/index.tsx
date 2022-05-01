@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Page = ({ answer }: Props) => {
     return (
         <>
-            <WordleLayout answer={answer}>
+            <WordleLayout answer={answer} link={"https://www.nytimes.com/games/wordle/index.html"}>
                 <AnswerdleHeader href={"wordle2"} title={"ANSWERDLE 2"} />
             </WordleLayout>
         </>

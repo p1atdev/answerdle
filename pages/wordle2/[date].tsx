@@ -1,6 +1,7 @@
 import { Box, Text } from "@chakra-ui/layout"
 import { parse } from "date-fns"
 import type { GetServerSideProps, NextPage } from "next"
+import AnswerdleHeader from "../../components/ui/header"
 import WordleLayout from "../../layout/wordle"
 import { Answer } from "../../types/answer"
 import { getWordle2 } from "../../utils/game"
@@ -48,8 +49,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 const Page = ({ answer, date }: Props) => {
     return (
-        <WordleLayout answer={answer} date={date}>
-            <></>
+        <WordleLayout title={"ANSWERDLE 2"} answer={answer} date={date} link={"https://www.wordhurdle.in/"}>
+            <AnswerdleHeader href={"wordle"} title={"ANSWERDLE"} />
         </WordleLayout>
     )
 }

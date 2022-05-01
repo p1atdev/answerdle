@@ -12,16 +12,17 @@ type Props = {
     title?: string
     answer: Answer
     date?: string
+    link?: string
 }
 
-const WordleLayout = ({ children, title, answer, date = new Date().toString() }: Props) => {
+const WordleLayout = ({ children, title, answer, date = new Date().toString(), link }: Props) => {
     const { setRevealed } = useContext(WordleContext)
 
     return (
         <>
             <Box pt={"5"}>
                 <Box mb={"10"}>{children}</Box>
-                <AnswerdleTitle text={title} />
+                <AnswerdleTitle text={title} link={link} />
                 <Center opacity={"50"}>
                     <HStack>
                         <Box>

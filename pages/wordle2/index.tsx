@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Page = ({ answer }: Props) => {
     return (
         <>
-            <WordleLayout title={"ANSWERDLE 2"} answer={answer}>
+            <WordleLayout title={"ANSWERDLE 2"} answer={answer} link={"https://www.wordhurdle.in/"}>
                 <AnswerdleHeader href={"wordle"} title={"ANSWERDLE"} />
             </WordleLayout>
         </>
