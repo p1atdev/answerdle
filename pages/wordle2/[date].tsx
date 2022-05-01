@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/layout"
-import { parse } from "date-fns/esm"
+import { parse } from "date-fns"
 import type { GetServerSideProps, NextPage } from "next"
 import { Answer } from "../../types/answer"
 import { getWordle2 } from "../../utils/game"
@@ -10,27 +10,36 @@ type Props = {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    const dateText = context.query.date as string
+    const dateText = context.params?.date as string
 
     if (!dateText) {
         return {
             redirect: {
-                destination: "/wordle",
+                destination: "/wordle2",
             },
             props: {},
         }
     }
 
-    const date = parse(dateText, "yyyy-MM-dd", new Date())
+    try {
+        const date = parse(dateText, "yyyy-MM-dd-HH", new Date())
 
-    const game = getWordle2()
+        const game = getWordle2()
 
-    const answer = getAnswer(game, date)
+        const answer = getAnswer(game, date)
 
-    return {
-        props: {
-            answer: answer,
-        },
+        return {
+            props: {
+                answer: answer,
+            },
+        }
+    } catch {
+        return {
+            redirect: {
+                destination: "/wordle2",
+            },
+            props: {},
+        }
     }
 }
 
