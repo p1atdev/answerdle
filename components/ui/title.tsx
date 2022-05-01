@@ -17,11 +17,17 @@ const AnswerdleTitle = ({ text = "ANSWERDLE", link, ...props }: Props) => {
                 {text.toUpperCase()}
             </Text>
             {link && (
-                <Link href={link} passHref>
-                    <Button mx={"1"} p={"1"} as={"a"} variant={"link"} target={"_blank"} rel={"noopener noreferrer"}>
-                        <Icon icon={"heroicons-outline:external-link"} />
-                    </Button>
-                </Link>
+                <Button
+                    mx={"1"}
+                    p={"1"}
+                    as={"a"}
+                    variant={"link"}
+                    href={link}
+                    target={"_blank"}
+                    rel={"noopener noreferrer"}
+                >
+                    <Icon icon={"heroicons-outline:external-link"} />
+                </Button>
             )}
         </Center>
     )
