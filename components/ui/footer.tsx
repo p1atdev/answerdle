@@ -9,7 +9,7 @@ const AnswerdleFooter = ({ ...props }: Props) => {
         <footer {...props}>
             <VStack opacity={"50%"}>
                 <HStack>
-                    <a href={"https://github.com/p1atdev/answerdle"} target={"_blank"}>
+                    <a href={"https://github.com/p1atdev/answerdle"} target={"_blank"} rel={"noopener noreferrer"}>
                         <HStack>
                             <Icon icon="logos:github-icon" />
                             <Text>p1atdev/answerdle</Text>
