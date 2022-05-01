@@ -11,9 +11,6 @@ type Props = {
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const today = new Date()
 
-    console.log("today", today)
-    console.log("today.getHours()", today.getHours())
-
     const game = getWordle2()
 
     const answer = getAnswer(game, today)
