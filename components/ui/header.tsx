@@ -13,7 +13,7 @@ const AnswerdleHeader = ({ href, title }: Props) => {
     const { setRevealed } = useContext(WordleContext)
     return (
         <HStack h={"10"} p={"8"}>
-            <Link href={href}>
+            <Link href={href} passHref>
                 <Button
                     variant={"link"}
                     onClick={() => {

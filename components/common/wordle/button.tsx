@@ -26,14 +26,6 @@ const WordleButton = ({ children, ...props }: Props) => {
                     duration: 0.5,
                 },
             })
-        } else {
-            // control.start({
-            //     translateX: [0, -50, 0],
-            //     transition: {
-            //         delay: 3.0,
-            //         duration: 0.5,
-            //     },
-            // })
         }
     }, [revealed])
 
