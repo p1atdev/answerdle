@@ -1,78 +1,34 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
-</p>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<h2 align="center">
-<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
-</h2><br>
+## Getting Started
 
-<pre align="center">
-🧪 Working in Progress
-</pre>
-
-<p align="center">
-<br>
-<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
-<br><br>
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-</p>
-
-## Features
-
-- [💚 Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
-
-- ⚡️ Vite - Instant HMR
-
-- 🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
-
-- 😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/antfu/unocss)
-
-- 🔥 The `<script setup>` syntax
-
-- 🍍 [State Management via Pinia](https://pinia.esm.dev/)
-
-- 📥 APIs auto importing - for Composition API, VueUse and custom composables.
-
-- 🏎 Zero-config cloud functions and deploy
-
-- 🦾 TypeScript, of course
-
-## Plugins
-
-### Nuxt Modules
-
-- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
-- [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine.
-- [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
-
-## IDE
-
-We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable Vetur if you have it).
-
-## Variations
-
-- [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
-- [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) - Vitesse for Nuxt 3
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
-
-## Try it now!
-
-### Online
-
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
+First, run the development server:
 
 ```bash
-npx degit antfu/vitesse-nuxt3 my-nuxt3-app
-cd my-nuxt3-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+npm run dev
+# or
+yarn dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
