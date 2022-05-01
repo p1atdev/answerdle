@@ -10,6 +10,7 @@ import { WordleContext } from "../../components/context/wordle"
 import AnswerdleTitle from "../../components/ui/title"
 import WordleLayout from "../../layout/wordle"
 import AnswerdleHeader from "../../components/ui/header"
+import Head from "next/head"
 
 type Props = {
     answer: Answer
@@ -32,6 +33,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Page = ({ answer }: Props) => {
     return (
         <>
+            <Head>
+                <title>Answerdle</title>
+                <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}/wordle`} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="What is today's Wordle answer?" />
+                <meta property="og:description" content={`Use Answerdle to "solve" the Wordle!`} />
+                {/* <meta property="og:image" content="" /> */}
+            </Head>
             <WordleLayout title={"ANSWERDLE 2"} answer={answer} link={"https://www.wordhurdle.in/"}>
                 <AnswerdleHeader href={"wordle"} title={"ANSWERDLE"} />
             </WordleLayout>
